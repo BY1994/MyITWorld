@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Semiconductor</title>
+
+</head>
+<body>
+    <!--Bootstrap Navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">IT News</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item active">
+            <a class="nav-link" href="./index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">알고리즘 기초</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Pricing</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="container">
+        <h2>최신 IT 기사</h2>
+        <div class="card text-center">
+          <div class="card-header bg-dark">
+            <ul class="nav nav-pills card-header-pills">
+              <li class="nav-item">
+                <a class="nav-link active" href="#">Active</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Link</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+              </li>
+            </ul>
+          </div>
+          <div class="card-body">
+            <h5 class="card-title">Special title treatment</h5>
+            <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>
+    </div>
+
+<div class="container">
+    <h2>유용한 링크들</h2>
+    <table class="table">
+      <thead class="thead-dark">
+        <tr>
+          <th scope="col">#</th>
+          <th scope="col">분류</th>
+          <th scope="col">제목</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <th scope="row">1</th>
+          <td>면접준비</td>
+            <td><a href="https://github.com/JaeYeopHan/Interview_Question_for_Beginner">개발자 면접 질문</a></td>
+        </tr>
+        <tr>
+          <th scope="row">2</th>
+          <td>면접준비</td>
+            <td><a href="https://gmlwjd9405.github.io/2017/10/01/basic-concepts-of-development-algorithm.html">알고리즘 질문</a></td>
+        </tr>
+        <tr>
+          <th scope="row">3</th>
+          <td>운영체제</td>
+            <td><a href="https://www.youtube.com/watch?v=s5juP-2G42I&list=PLE6LEE8y2Jp_z8pkiuvHo7Vz-eQEKsk-I">Geoffrey Challen 운영체제 강의</a></td>
+        </tr>
+      </tbody>
+    </table>
+</div>
+
+
+    <!--Bootstrap-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <!--Axios-->
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <!--Vue js-->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        const URL = 'https://news.naver.com/main/mainNews.nhn?sid1=105&firstLoad=Y'
+
+        const getImage = async () => {
+            const response = await axios.get(URL, {headers: {
+          'Access-Control-Allow-Origin': '*',},})
+            console.log('아무것도?')
+            console.log(response);
+
+        }
+
+        getImage()
+    </script>
+</body>
+</html>
